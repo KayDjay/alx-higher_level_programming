@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+import os
+import py_compile
+
+pyfile = os.environ.get("PYFILE")
+
+py_compile.compile(pyfile, cfile=pyfile + "c")
+print(f"compiling {pyfile}c")
