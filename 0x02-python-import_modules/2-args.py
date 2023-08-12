@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from sys import argv
 
-num =len( argv) - 1
+num = len( argv) - 1
 
 __name__ = "__main__"
 
