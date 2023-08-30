@@ -7,7 +7,7 @@ class Square:
 
     def __init__(self, size=0):
 
-       """ initialised an object with size of square """
+        """ initialised an object with size of square """
 
         if type(size) != int:
             raise TypeError("size must be an integer")
