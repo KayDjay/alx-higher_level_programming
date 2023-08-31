@@ -24,13 +24,13 @@ class Square:
 
         if type(value) is not int:
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif  value < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
 
     @property
-    def postion(self):
+    def position(self):
         """ The position of square """
         return self.position
 
@@ -58,4 +58,4 @@ class Square:
         for a in range(self.__position[1]):
             print()
         for b in range(self.__size):
-            print(" " * self, position[0] + "#" * self.__size)
+            print(" " * self.__position[0] + "#" * self.__size)
