@@ -2,35 +2,32 @@
 
 """ Define a class Square """
 
-class Square:
 
+class Square:
 
     """ Initialising class object with size attibutes
             and its size arguements """
 
     def __init__(self, size=0):
-        
+
         """ initializes size of self with self  """
-        
         self.size = size
 
-        @property
-        def size(self):
-            return self.size
+    @property
+    def size(self):
+        return self.__size
 
-        @size.setter
+    @size.setter
+    def size(self, value):
 
-        def size(self, value):
+        """ If statement and its arguement """
 
-            """ If statement and its arguement """
-
-        if type(size) != int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = size
-        
+            self.__size = value
         """ Define public attribute area """
 
     def area(self):
