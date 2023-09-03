@@ -1,0 +1,41 @@
+# 0-add_integer.txt
+
+==========================================
+Doctest to add integer
+===========================================
+
+
+Import add_integer:
+	>>> sum = __import__("0-add_integer").add_integer
+
+Addition of two integers or floats:
+	>>> sum(4, 8)
+	12
+	>>> sum(5.0, 7.3)
+	12
+
+One arguement:
+	>>> sum(16)
+	114
+
+List of numbers:
+	>>> sum([2, 6], 9)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+	>>> sum(5, [3, 5])
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+No arguement:
+	>>> sum()
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Float overflow:
+	>>> sum(4, float("int"))
+	Traceback (most recent call last):
+	...
+	ValueError: could not convert string to float: 'int'
