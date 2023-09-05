@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-
-""" Define Rectangle class """
+"""
+Defines Rectangle class
+"""
 
 
 class Rectangle:
-    """ Initialize Rectangle width and height """
+    """ Initialisng Rectangle with width and height """
     def __init__(self, width=0, height=0):
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -38,11 +39,22 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """ calculates and returns area """
+        """ Publicarea of a rectangle attribute """
         return self.__width * self.__height
 
     def perimeter(self):
-        """ calculates the perimeter of a Rectangle """
+        """ Public perimeter of a rectangle attribute """
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """ return string rectangle"""
+        width = self.__width
+        height = self.__height
+        ret = ''
+        if width == 0 or height == 0:
+            ret
+        else:
+            ret = f'{"#" * width}\n' * (height - 1) + "#" * width
+        return ret
