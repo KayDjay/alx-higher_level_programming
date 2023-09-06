@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-
 """ Define add function """
+
+
 def add_integer(a, b=98):
     if type(a) != int and type(a) != float:
         raise TypeError("a must be an integer")

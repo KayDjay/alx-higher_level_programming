@@ -33,9 +33,3 @@ No arguement:
 	Traceback (most recent call last):
 	...
 	TypeError: add_integer() missing 1 required positional argument: 'a'
-
-Float overflow:
-	>>> sum(4, float("int"))
-	Traceback (most recent call last):
-	...
-	ValueError: could not convert string to float: 'int'
