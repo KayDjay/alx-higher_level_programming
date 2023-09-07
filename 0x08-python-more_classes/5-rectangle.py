@@ -1,19 +1,12 @@
 #!/usr/bin/python3
-"""
-Defines Rectangle class
-"""
+""" Defines Rectangle class"""
 
 
 class Rectangle:
-
+    """ initializing Rectangle with width and height """
     def __init__(self, width=0, height=0):
-        """ initializing Rectangle with width and height """
         self.width = width
         self.height = height
-
-        self.width = width
-        self.height = height
-        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
