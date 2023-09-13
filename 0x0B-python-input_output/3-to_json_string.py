@@ -3,6 +3,7 @@
 
 import json
 
+
 def to_json_string(my_obj):
     """ This function get string from json """
     return json.dumps(my_obj)

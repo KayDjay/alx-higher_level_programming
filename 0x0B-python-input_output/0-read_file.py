@@ -4,11 +4,11 @@
 
 
 def read_file(filename=""):
-    """ This function read text file 
+    """ This function read text file
     Args:
         Filename to be read
         Return: print the file content """
 
-    with open(filename, "r", encoding ='utf-8') as f:
+    with open(filename, "r", encoding='utf-8') as f:
         content = f.read()
         print(content, end='')
