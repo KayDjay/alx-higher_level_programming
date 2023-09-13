@@ -1,0 +1,60 @@
+se_geometry.txt
+
+=============
+doctest for 7-base_geemetry.py
+========================
+
+Usage
+=============
+test the value of name
+===================
+
+Import module:
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> geo = BaseGeometry()
+
+name as string:
+	>>> name = 'Kay'
+	>>> value = 2
+	>>> geo.integer_validator(name, value)
+	
+Area:
+	>>> geo.area()
+	Traceback (most recent call last):
+    	...
+	Exception: area() is not implemented
+
+few arguments:
+	>>> name = 'Kay'
+	>>> value = 10
+	>>> geo.integer_validator()
+	Traceback (most recent call last):
+    	...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> geo.integer_validator(name)
+	Traceback (most recent call last):
+    	...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Value is 0:
+	name = 'Kay'
+	value = 0
+	>>> geo.integer_validator(name, value)
+	Traceback (most recent call last):
+    	...
+	ValueError: Kay must be greater than 0
+
+Value not an integer
+	name = 'Kay'
+	value = [2]
+	>>> geo.integer_validator(name, value)
+	Traceback (most recent call last):
+	...
+	TypeError: Kay must be an integer
+
+	>>> value = (2,)
+	>>> geo.integer_validator(name, value)
+	Traceback (most recent call last):
+    	...
+	TypeError: Kay must be an integer
