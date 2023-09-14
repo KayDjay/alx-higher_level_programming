@@ -10,10 +10,7 @@ class Square(Rectangle):
         """ Initialize the square class with a size """
         self.__size = size
         self.integer_validator('size', size)
-
-    """ Area public instance """
-    def area(self):
-        return self.__size ** 2
+        super().__init__(size, size)
 
     """String public  instance """
     def __str__(self):
