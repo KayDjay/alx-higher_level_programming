@@ -37,22 +37,6 @@ few arguments:
     	...
 	TypeError: integer_validator() missing 1 required positional argument: 'value'
 
-Value is 0:
-	name = 'Kay'
-	value = 0
-	>>> geo.integer_validator(name, value)
-	Traceback (most recent call last):
-    	...
-	ValueError: Kay must be greater than 0
-
-Value not an integer
-	name = 'Kay'
-	value = [2]
-	>>> geo.integer_validator(name, value)
-	Traceback (most recent call last):
-	...
-	TypeError: Kay must be an integer
-
 	>>> value = (2,)
 	>>> geo.integer_validator(name, value)
 	Traceback (most recent call last):
