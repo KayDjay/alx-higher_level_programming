@@ -21,7 +21,7 @@ class Square(Rectangle):
         x = self.x
         y = self.y
         d = self.id
-        return f"[Square] ({d}) {x}/{y} - {s1}"
+        return f"[Square] ({d}) {x}/{y} - {s}"
 
     @property
     def size(self):
@@ -48,9 +48,9 @@ class Square(Rectangle):
             if key in attribute_names:
                 setattr(self, key, value)
 
-     """Dictionary Public Instance """
+    """Dictionary Public Instance """
     def to_dictionary(self):
         """
         this method return a dictionary of the square
         """
-    return {'x': self.x, 'y': self.y, 'id': self.id, 'size': self.width}
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'size': self.width}
