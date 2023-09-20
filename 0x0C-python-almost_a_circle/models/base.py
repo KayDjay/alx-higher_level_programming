@@ -2,6 +2,7 @@
 """ This module is about Base class and its attributes """
 import json
 
+
 class Base:
     """ This is the Base Object """
 
@@ -36,7 +37,6 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
-
     @classmethod
     def save_to_file(cls, list_objs):
         """ This is to writes JSON string of lists_objs to a file """
@@ -55,12 +55,12 @@ class Base:
             return []
         else:
             return json.loads(json_string)
-        
+
     @classmethod
     def create(cls, **dictionary):
         """ This function return the set attributes to the instances"""
         if cls.__name__ == "Rectangle":
-            dummy = cls(1, 1)
+            dummy = cls(1, 2)
         else:
             dummy = cls(1)
         dummy.update(**dictionary)
