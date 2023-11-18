@@ -19,7 +19,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states\
             WHERE name=%s\
-            ORDER BY states.id ASC",(argv[4],))
+            ORDER BY states.id ASC", (argv[4],))
     states = (cursor.fetchall())
     for state in states:
         print(state)
