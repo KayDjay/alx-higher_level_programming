@@ -6,7 +6,6 @@ from sys import argv
 import MySQLdb
 
 if __name__ == "__main__":
-    """    args = argv[1:]"""
 
     db = MySQLdb.connect(
         host="localhost",
