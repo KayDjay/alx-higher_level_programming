@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-""" This is a script that lists all state object from hbtn_0e_6_usa """
+""" This is a script that lists all state objects that contain the letter a
+       from hbtn_0e_6_usa """
 
 from sys import argv
 from sqlalchemy import create_engine
@@ -14,8 +15,10 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    states = session.query(State).all()
+    state = State(name="Louisiana")
+    session.add(state)
+    state = session.query(State).filter(State.name == "Louisiana").first()
+    session.commit()
+    print("{}".format(state.id))
 
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
     session.close()
